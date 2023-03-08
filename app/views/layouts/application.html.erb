@@ -11,6 +11,16 @@
   </head>
 
   <body>
+    <header >
+      <%= render "layouts/nav" %>
+    </header>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
     <%= yield %>
   </body>
+
+  <footer>
+    <%= render "layouts/footer" %>
+  </footer>
 </html>
