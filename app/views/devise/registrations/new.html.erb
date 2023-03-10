@@ -1,13 +1,13 @@
 <main class="form-auth w-100 m-auto">
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <form>
-    <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+    <h1 class="h3 mb-3 fw-normal">Please sign up</h1>
     <%= render "devise/shared/error_messages", resource: resource %>
-      <%= f.email_field :first_name, autofocus: true, class: "form-control", placeholder: "First Name" %>
-      <%= f.email_field :last_name, class: "form-control", placeholder: "Last Name" %>
-      <%= f.email_field :email, autofocus: true, class: "form-control", id: "inputEmail", placeholder: "Email address", autocomplete: "email" %>
-      <%= f.password_field :password, autocomplete: "current-password", class: "form-control", id: "inputPassword", placeholder: "Password" %>
-      <%= f.password_field :password_confirmation, autocomplete: "current-password", class: "form-control", id: "inputPassword", placeholder: "Confirm Password" %>
+      <%= f.text_field :first_name, autofocus: true, class: "form-control", placeholder: "First Name", style: "margin-bottom: 10px" %>
+      <%= f.text_field :last_name, class: "form-control", placeholder: "Last Name", style: "margin-bottom: 10px" %>
+      <%= f.email_field :email, autofocus: true, class: "form-control", id: "inputEmail", placeholder: "Email address", autocomplete: "email", style: "margin-bottom: 10px" %>
+      <%= f.password_field :password, autocomplete: "current-password", class: "form-control", id: "inputPassword", placeholder: "Password", style: "margin-bottom: 10px" %>
+      <%= f.password_field :password_confirmation, autocomplete: "current-password", class: "form-control", id: "inputPassword", placeholder: "Confirm Password", style: "margin-bottom: 10px" %>
 
 
     <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
