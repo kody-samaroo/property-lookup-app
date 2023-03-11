@@ -16,7 +16,7 @@ gem 'webpacker', '~> 5.0'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
-gem 'bcrypt', '~> 3.1', '>= 3.1.12'
+# gem 'bcrypt', '~> 3.1', '>= 3.1.12'
 gem 'devise'
 gem 'bootstrap', '~> 5.2.2'
 

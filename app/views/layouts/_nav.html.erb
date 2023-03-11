@@ -15,12 +15,18 @@
         <li class="nav-item">
           <a class="nav-link" href="#">Sell</a>
         </li>
+        <% if account_signed_in? %>
+        <li class="nav-item">
+          <%= link_to "Log Out", destroy_account_session_path, method: :delete, class: "nav-link" %>
+        </li>
+        <% else %>
         <li class="nav-item">
           <%= link_to "Log In", new_account_session_path, class: "nav-link"%>
         </li>
         <li class="nav-item">
           <%= link_to "Sign Up", new_account_registration_path, class: "nav-link"%>
         </li>
+        <% end %>
       </ul>
 
       <form class="d-flex" role="search">
