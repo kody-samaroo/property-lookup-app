@@ -20,6 +20,13 @@ gem 'jbuilder', '~> 2.7'
 gem 'devise'
 gem 'bootstrap', '~> 5.2.2'
 
+# Image uploads to Amazon S3
+gem 'carrierwave', '~> 0.10.0'
+gem 'fog', '~> 2.3'
+
+# Image resizing
+gem 'mini_magick', '~> 4.12'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 

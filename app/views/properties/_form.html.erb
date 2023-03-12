@@ -31,7 +31,13 @@
     <%= form.number_field :sqft, class: "form-control" %>
   </div>
 
+    <div class="field">
+    <%= form.label :photo %>
+    <%= form.file_field :photo, class: "form-control" %>
+    <%= form.hidden_field :photo_cache %>
+  </div>
+
   <div class="actions" style="padding: 10px">
-    <%= form.submit "Submit", class: "btn btn-lg btn-block btn-success" %>
+    <%= form.submit "Save", class: "btn btn-lg btn-block btn-success" %>
   </div>
 <% end %>
