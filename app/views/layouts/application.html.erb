@@ -14,14 +14,21 @@
     <% if ["public", "devise"].include?(controller.controller_name) %>
     <header >
       <%= render "layouts/nav" %>
+      <%= yield %>
     </header>
     <% else %>
-      <%= render "layouts/dashboard" %>
-    <% end %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+        <%= render "layouts/dashboard" %>
 
-    <%= yield %>
+        <div class="container-fluid">
+          <div class="row">
+            <%= render "layouts/sidebar" %>
+              <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <%= yield %>
+              </main>
+          </div>
+        </div>
+    <% end %>
+
   </body>
 
   <footer>
