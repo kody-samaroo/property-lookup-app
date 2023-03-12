@@ -13,35 +13,35 @@
 
   <div class="field">
     <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, class: "form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :address %>
-    <%= form.text_field :address %>
+    <%= form.text_field :address, class: "form-control"%>
   </div>
 
   <div class="field">
     <%= form.label :price %>
-    <%= form.number_field :price %>
+    <%= form.number_field :price, class: "form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :rooms %>
-    <%= form.number_field :rooms %>
+    <%= form.number_field :rooms, class: "form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :bathrooms %>
-    <%= form.number_field :bathrooms %>
+    <%= form.number_field :bathrooms, class: "form-control" %>
   </div>
 
   <div class="field">
     <%= form.label :sqft %>
-    <%= form.number_field :sqft %>
+    <%= form.number_field :sqft, class: "form-control" %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="actions" style="padding: 10px">
+    <%= form.submit "Submit", class: "btn btn-lg btn-block btn-success" %>
   </div>
 <% end %>
