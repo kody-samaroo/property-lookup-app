@@ -40,10 +40,11 @@
     </div>
     <div class="row">
       <div class="col">
-      <p class="h3">Property Description</p>
-      <p class="h4"><%= @property.name %></p>
+      <p class="h3"><%= @property.name %></p>
+      <p class="h4">Property Description</p>
 
-        <%= simple_form  @property.details %>
+      <div id="prop-details">
+        <%= simple_format  @property.details %>
 
         <p>
           <strong>Address:</strong>
@@ -70,6 +71,10 @@
           <%= @property.sqft %>
         </p>
       </div>
+
+      <button id="toggleDetails" class="btn btn-outline-info mt-3">Show more</button>
+      </div>
+      
 
       <div class="col-4">
         <%= render "properties/agent_details" %>
