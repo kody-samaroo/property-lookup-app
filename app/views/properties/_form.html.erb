@@ -1,42 +1,42 @@
 <%= form_with(model: property) do |form| %>
   <%= render "layouts/validation", item: @property%>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :name %>
     <%= form.text_field :name, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :address %>
     <%= form.text_field :address, class: "form-control"%>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :price %>
     <%= form.number_field :price, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :rooms %>
     <%= form.number_field :rooms, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :bathrooms %>
     <%= form.number_field :bathrooms, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :sqft %>
     <%= form.number_field :sqft, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :details %>
     <%= form.text_area :details, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :photo %>
     <%= form.file_field :photo, class: "form-control" %>
     <%= form.hidden_field :photo_cache %>
