@@ -31,6 +31,11 @@
     <%= form.number_field :sqft, class: "form-control" %>
   </div>
 
+  <div class="form-group pt-3 pb-3">
+    <%= form.radio_button :for_sale, true, checked: true %> For Sale <br/>
+    <%= form.radio_button :for_sale, false, checked: true %> Rental
+  </div>
+
   <div class="form-group">
     <%= form.label :details %>
     <%= form.text_area :details, class: "form-control" %>
