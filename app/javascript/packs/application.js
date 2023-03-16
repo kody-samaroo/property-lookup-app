@@ -11,5 +11,4 @@ var jQuery = require("jquery");
 global.$ = global.jQuery = jQuery
 window.$ = global.jQuery = jQuery
 
-
 require("./includes/properties");

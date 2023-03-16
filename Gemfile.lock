@@ -270,6 +270,8 @@ GEM
     fog-xml (0.1.4)
       fog-core
       nokogiri (>= 1.5.11, < 2.0.0)
+    font-awesome-sass (6.3.0)
+      sassc (~> 2.0)
     formatador (0.3.0)
     globalid (1.1.0)
       activesupport (>= 5.0)
@@ -473,6 +475,7 @@ DEPENDENCIES
   devise
   figaro
   fog (~> 2.3)
+  font-awesome-sass (~> 6.3.0)
   jbuilder (~> 2.7)
   listen (~> 3.3)
   mini_magick (~> 4.12)

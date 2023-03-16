@@ -1,4 +1,4 @@
-<div class="property-main-photo" style="background-image:url('<%= property_photo(@property)%>')">
+<div class="property-main-photo" style="background-image:url('<%= property_banner_photo(@property)%>')">
   <div class="photo-overlay">
   </div>
 </div>
@@ -15,14 +15,17 @@
           <div class="row mr-lg-3 mt-sm-3 bg-light p-3">
             <div class="col-4">
               <p class="mb-0"><strong>Bedrooms</strong></p>
+              <i class="fa-solid fa-bed"></i>
               <span class="lead"><%= @property.rooms %></span>
             </div>
             <div class="col-4">
               <p class="mb-0"><strong>Bathrooms</strong></p>
+              <i class="fa-solid fa-bath"></i>
               <span class="lead"><%= @property.bathrooms %></span>
             </div>
             <div class="col-4">
-              <p class="mb-0"><strong>Square Footage</strong></p>
+              <p class="mb-0"><strong>Sq Foot</strong></p>
+              <i class="fa-regular fa-building"></i>
               <span class="lead"><%= @property.sqft %> ft</span>
             </div>
           </div>
@@ -82,4 +85,3 @@
     </div>
       <%= link_to 'Edit', edit_property_path(@property), class: "btn btn-success" %>
 </div>
-

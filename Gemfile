@@ -19,6 +19,7 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1', '>= 3.1.12'
 gem 'devise'
 gem 'bootstrap', '~> 5.2.2'
+gem "font-awesome-sass", "~> 6.3.0"
 
 # Image uploads to Amazon S3
 gem 'carrierwave', '~> 0.10.0'
