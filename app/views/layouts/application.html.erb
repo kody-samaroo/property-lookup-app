@@ -17,7 +17,7 @@
 
   <body id="<%= controller.controller_name %>" class="<%= controller.action_name %>"> <%= "show-sidebar" if @show_sidebar.present? %>
     <% if @show_sidebar.nil? %>
-    <header >
+    <header>
       <%= render "layouts/nav" %>
       <%= yield %>
     </header>

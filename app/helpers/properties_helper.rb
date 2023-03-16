@@ -13,4 +13,10 @@ module PropertiesHelper
         img = property.photo.present? ? property.photo.thumb.url : asset_url("house.jpeg")
     end
 
+    def set_datetime property
+        day = @property.available_date.strftime("%A")
+        month = @property.available_date.strftime("%B")
+        date = @property.available_date.day.ordinalize
+        show_datetime = "#{day}, #{month} #{date}"
+    end
 end
