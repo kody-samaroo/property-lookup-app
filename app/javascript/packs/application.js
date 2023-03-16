@@ -8,7 +8,15 @@ import Rails from "@rails/ujs"
 Rails.start()
 
 var jQuery = require("jquery");
-global.$ = global.jQuery = jQuery
-window.$ = global.jQuery = jQuery
+global.$ = global.jQuery = jQuery;
+window.$ = global.jQuery = jQuery;
 
 require("./includes/properties");
+
+import toastr from "toastr";
+toastr.options = {
+    closeButton: true,
+    progressBar: true,
+    showDuration: "50"
+}
+global.toastr = toastr;
