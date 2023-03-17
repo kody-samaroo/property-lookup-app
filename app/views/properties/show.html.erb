@@ -69,6 +69,8 @@
 
   <div class="col-sm-4">
     <%= render "properties/agent_details" %>
+
+    <iframe class="ms-lg-1 mt-3" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAJT-NvrW4pbK2v9toNx2DQ3u-3sNjH7Fg&q=<%= @property.address.to_param %>" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
       <%= link_to 'Edit', edit_property_path(@property), class: "btn btn-success" %>
@@ -77,6 +79,9 @@
 <section class="mt-5 mb-5">
   <div class="container">
     <div class="row">
+      <div class="col-12">
+        <p class="h3 mb-3">Other properties by this agent</p>
+      </div>
       <%= render "properties/list_properties", properties: @agent_properties %> 
     </div>
   </div>
