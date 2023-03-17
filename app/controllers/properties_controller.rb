@@ -12,6 +12,7 @@ class PropertiesController < ApplicationController
   def show
     @agent = @property.account
     @agent_properties = Property.where(account_id: @agent.id).where.not(id: @property.id)
+    @key = ENV['MAPS_API_KEY']
   end
 
   # GET /properties/new

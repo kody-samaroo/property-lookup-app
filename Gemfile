@@ -21,6 +21,7 @@ gem 'devise'
 gem 'bootstrap', '~> 5.2.2'
 gem "font-awesome-sass", "~> 6.3.0"
 gem 'toastr-rails', '~> 1.0', '>= 1.0.3'
+gem 'dotenv-rails'
 
 # Image uploads to Amazon S3
 gem 'carrierwave', '~> 0.10.0'

@@ -69,8 +69,7 @@
 
   <div class="col-sm-4">
     <%= render "properties/agent_details" %>
-
-    <iframe class="ms-lg-1 mt-3" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAJT-NvrW4pbK2v9toNx2DQ3u-3sNjH7Fg&q=<%= @property.address.to_param %>" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <iframe class="ms-lg-1 mt-3" src="https://www.google.com/maps/embed/v1/place?key=<%= @key %>&q=<%= @property.address.to_param %>" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
       <%= link_to 'Edit', edit_property_path(@property), class: "btn btn-success" %>

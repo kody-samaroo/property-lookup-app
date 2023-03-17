@@ -19,4 +19,5 @@ module PropertiesHelper
         date = @property.available_date.day.ordinalize
         show_datetime = "#{day}, #{month} #{date}"
     end
+
 end
