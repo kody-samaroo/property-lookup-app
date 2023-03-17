@@ -1,7 +1,11 @@
 $(function(){
     $("#show-tel").on("click", function(){
         var $this = $(this);
-        $this.find("span").text( $this.data("telephone") );
+        if ($this.find("span")[0].innerText == "CALL"){
+            $this.find("span").text( $this.data("telephone") );
+        } else {
+            $this.find("span").text("CALL");
+        }
     });
 
     $("#toggleDetails").on("click", function(){
