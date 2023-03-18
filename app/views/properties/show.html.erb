@@ -72,7 +72,7 @@
   </div>
 
   <div class="col-sm-4">
-    <%= render "properties/agent_details" %>
+    <%= render "properties/agent_details", agent: @agent %>
     <iframe class="ms-lg-1 mt-3" src="https://www.google.com/maps/embed/v1/place?key=<%= @key %>&q=<%= @property.address.to_param %>" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>

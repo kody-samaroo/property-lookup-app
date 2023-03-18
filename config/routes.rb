@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   resources :properties
   devise_for :accounts
 
+  get "/accounts" => 'admin#accounts', as: :accounts
+
   get '/dashboard' => 'dashboard#index', as: :dashboard
   get '/profile/:id' => 'accounts#profile', as: :profile
 
