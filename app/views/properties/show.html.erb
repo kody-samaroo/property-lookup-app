@@ -63,6 +63,10 @@
         </div>
 
         <button id="toggleDetails" class="btn btn-outline-info mt-3">Show more</button>
+
+        <% if @property.for_sale %>
+          <p class="mt-5">* This rate is based on a 30 year mortage, after paying an initial 10% down payment. Shorter term mortage</p>
+        <% end %>
       </div>
     </div>
   </div>

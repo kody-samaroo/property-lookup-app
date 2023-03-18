@@ -1,13 +1,14 @@
 <div class="text-center border p-4 pb-4 ms-lg-4">
     <div class="mb-2">
-        <%= profile_picture @agent %>
+        <%= link_to profile_picture(@agent), profile_path(@agent.id) %>
     </div>
-    <h3 clas="h4 m-0"> <%= @agent.first_name %> </h3>
+    <h3 clas="h4 m-0"> <%= @agent.first_name %></h3>
     <p> Dave Real Estate </p>
 
     <div class="d-grid gap-2 pb-2">
-        <button class="btn btn-info text-light" id="show-tel" data-telephone="<%= @agent.telephone %>"><i data-feather="phone" class="pe-1" style="height: 65%"></i> <span>CALL</span> </button>
+        <button class="btn btn-info text-light" id="show-tel" data-telephone="<%= @agent.telephone %>"><i data-feather="phone" class="pe-1" style="height: 65%"></i> <span class="telephone">CALL</span> </button>
     </div>
-        <%= link_to "PROFILE", profile_path(@agent.id), class: "btn btn-warning text-light" %>
-        <button class="btn btn-success text-light"><i data-feather="mail"></i>EMAIL</button>
+    <div class="d-grid gap-2">
+        <button class="btn btn-success text-light" id="show-email" data-email="<%= @agent.email %>"><i data-feather="mail" class="pe-1" style="height: 65%"></i> <span class="email">EMAIL</span> </button>
+    </div>
 </div>
