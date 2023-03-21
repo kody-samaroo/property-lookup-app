@@ -1,6 +1,6 @@
 <% @properties.each do |property| %>
     <div class="col-4">
-        <div class="property border">
+        <div class="property border h-100">
 
             <div class="propety-thumb" style="background-image:url('<%= property_thumbnail_url(property) %>')">
                 <%= link_to "", property_path(property) %>
