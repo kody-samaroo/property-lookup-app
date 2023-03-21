@@ -10,7 +10,9 @@
     <div class="container">
       <div class="row">
         <%= render "properties/list_properties", properties: @properties %>
-        <%= render "properties/add_properties" %>
+        <% if account_signed_in? %>
+          <%= render "properties/add_properties" %>
+        <% end %>
       </div>
     </div>
   </section>
