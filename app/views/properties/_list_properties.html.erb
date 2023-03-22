@@ -3,6 +3,11 @@
         <div class="property border h-100">
 
             <div class="propety-thumb" style="background-image:url('<%= property_thumbnail_url(property) %>')">
+                <% if property.for_sale? %>
+                    <span class="buy-dot text-center"> Buy </span>
+                <% else %>
+                    <span class="rent-dot text-center"> Rent </span>
+                <% end %>
                 <%= link_to "", property_path(property) %>
             </div>
 

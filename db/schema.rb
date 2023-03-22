@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(version: 2023_03_18_154142) do
     t.string "image"
     t.string "company"
     t.string "telephone"
-    t.boolean "admin"
+    t.boolean "admin", default: false
     t.text "bio"
     t.string "background_image"
     t.index ["email"], name: "index_accounts_on_email", unique: true
