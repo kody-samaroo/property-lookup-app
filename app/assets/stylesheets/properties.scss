@@ -30,6 +30,10 @@
     }
 }
 
-
-
-
+.propertyCard {
+    transition: outline-width 0.3s linear;
+  }
+  
+.propertyCard:hover { 
+    outline: solid 3px #F58F06; 
+}

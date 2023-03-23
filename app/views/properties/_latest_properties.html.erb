@@ -1,5 +1,5 @@
 <% @properties.each do |property| %>
-    <div class="col-4">
+    <div class="borderCard col-4">
         <div class="property border h-100">
 
             <div class="propety-thumb" style="background-image:url('<%= property_thumbnail_url(property) %>')">
@@ -23,6 +23,7 @@
                 </span>
             
                 <p class="mt-2"><%= property.address %></p>
+                <span> <%= property.for_sale? ? "For Sale" : "For Rent" %> </span>
             </div>
         </div>
     </div>
