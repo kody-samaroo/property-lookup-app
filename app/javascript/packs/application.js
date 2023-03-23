@@ -3,15 +3,14 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 
-import Rails from "@rails/ujs"
+require("@rails/ujs").start()
+require("./includes/properties");
 
-Rails.start()
 
 var jQuery = require("jquery");
 global.$ = global.jQuery = jQuery;
 window.$ = global.jQuery = jQuery;
 
-require("./includes/properties");
 
 import toastr from "toastr";
 toastr.options = {
@@ -20,3 +19,4 @@ toastr.options = {
     showDuration: "50"
 }
 global.toastr = toastr;
+
