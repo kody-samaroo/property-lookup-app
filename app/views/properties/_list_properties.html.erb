@@ -3,12 +3,7 @@
         <div class="property border h-100">
 
             <div class="propety-thumb" style="background-image:url('<%= property_thumbnail_url(property) %>')">
-                <% if property.for_sale? %>
-                    <span class="buy-dot text-center"> Buy </span>
-                <% else %>
-                    <span class="rent-dot text-center"> Rent </span>
-                <% end %>
-                <%= link_to "", property_path(property) %>
+                  <%= link_to "", property_path(property) %>
             </div>
 
             <div class="property-summary p-3">      
@@ -28,6 +23,7 @@
                 </span>
             
                 <p class="mt-2"><%= property.address %></p>
+                <span> <%= property.for_sale? ? "For Sale" : "For Rent" %> </span>
             </div>
         </div>
     </div>

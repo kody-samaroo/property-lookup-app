@@ -30,28 +30,6 @@
     }
 }
 
-.buy-dot {
-    height: 25px;
-    width: 50px;
-    background-color: #4a7aff;
-    border-radius: 50%;
-    display: inline-block;
-    transition: all .2s ease-in-out; 
-}
-
-.rent-dot {
-    height: 25px;
-    width: 50px;
-    background-color: #0cec00;
-    border-radius: 50%;
-    display: inline-block;
-    transition: all .2s ease-in-out; 
-    transform-origin: left;
-}
-
-.buy-dot:hover, .rent-dot:hover {
-    transform: scale(2.0, 1.0);
-}
 
 
 
