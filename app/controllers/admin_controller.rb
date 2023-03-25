@@ -3,7 +3,6 @@ class AdminController < ApplicationController
 
     def accounts
         @accounts = Account.where(admin: false)
-
     end
 
     def can_access?

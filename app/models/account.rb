@@ -6,4 +6,5 @@ class Account < ApplicationRecord
          :trackable, :confirmable
 
   has_many :properties
+  has_many :news
 end
