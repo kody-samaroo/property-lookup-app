@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :news
   resources :properties
   devise_for :accounts
 
