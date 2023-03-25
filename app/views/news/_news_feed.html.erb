@@ -1,4 +1,7 @@
 <h1>Updates</h1>
 
-
-<br>
+<% @news.each do |some| %>
+    <div class="row">
+        <p> <%= some.title %> </p>
+    </div>
+<% end %>

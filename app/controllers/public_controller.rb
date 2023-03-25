@@ -10,6 +10,7 @@ class PublicController < ApplicationController
     # end
     
     @properties = Property.latest
+    @news = News.all
   end
 
 end

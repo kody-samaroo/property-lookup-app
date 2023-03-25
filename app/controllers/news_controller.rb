@@ -1,6 +1,7 @@
 class NewsController < ApplicationController
   before_action :set_news, only: %i[ show edit update destroy ]
-
+  before_action :authenticate_account!, only: [:new, :create, :destroy]
+  before_action :set_sidebar, except: [:show]
 
   # GET /news or /news.json
   def index
@@ -23,10 +24,11 @@ class NewsController < ApplicationController
   # POST /news or /news.json
   def create
     @news = News.new(news_params)
+    @news.account_id = current_account.id
 
     respond_to do |format|
       if @news.save
-        format.html { redirect_to @news, notice: "News was successfully created." }
+        format.html { redirect_to root_path, notice: "An announcement was successfully created." }
         format.json { render :show, status: :created, location: @news }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -63,8 +65,12 @@ class NewsController < ApplicationController
       @news = News.find(params[:id])
     end
 
+    def set_sidebar
+      @show_sidebar = true
+    end
+
     # Only allow a list of trusted parameters through.
     def news_params
-      params.fetch(:news, {})
+      params.require(:news).permit(:title, :content, :photo)
     end
 end
