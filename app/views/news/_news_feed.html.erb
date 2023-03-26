@@ -1,7 +1,12 @@
 <h1>Updates</h1>
 
-<% @news.each do |some| %>
+<% @news.each do |new| %>
     <div class="row">
-        <p> <%= some.title %> </p>
+        <hr/>
+            <p class="fw-semibold text-decoration-underline"> <%= new.title %> <p>
+            <p class="fw-light"> <%= new.content %> </p>
+            <p class=""> <%= find_author new %> </p>
+            <p class=""> <%= find_date new %> </p>
+        <hr/>
     </div>
 <% end %>
