@@ -12,4 +12,17 @@ module NewsHelper
         date = new.created_at.day.ordinalize
         show_datetime = "#{day}, #{month} #{date}"
     end
+
+    def property_banner_photo property
+        img = property.photo.present? ? property.photo.thumb.url : asset_url("announcement.jpeg")
+    end
+
+    def news_thumbnail new
+        img = new.photo.present? ? new.photo.thumb.url : "announcement.jpeg"
+        image_tag img, class: "news-thumb", width: "100%", height: "225px"
+    end
+
+    def news_thumbnail_url new
+        new.photo.present? ? new.photo.thumb.url : asset_url("announcement.jpeg")
+    end
 end
