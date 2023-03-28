@@ -14,15 +14,16 @@
     }
 }
 
-.property-main-photo {
-    height: 500px;
-    background-size: cover;
-    background-position-y: center;
+.news-main-photo {
+    height: 300px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     margin-bottom: 10px;
 }
 
 #news-content {
-    height: 100px;
+    height: 75px;
     overflow-y: auto;
 }
 

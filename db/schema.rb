@@ -48,7 +48,8 @@ ActiveRecord::Schema.define(version: 2023_03_25_014456) do
   create_table "news", force: :cascade do |t|
     t.bigint "account_id"
     t.string "title"
-    t.string "content"
+    t.string "preview"
+    t.text "content"
     t.string "photo"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

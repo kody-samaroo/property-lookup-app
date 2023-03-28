@@ -6,9 +6,9 @@
             <%= news_thumbnail(new) %>
         </div>
         <div class="col-sm-9">
-            <h5 id="news-title" class="fw-semibold text-decoration-underline mb-0"> <%= new.title %> </h5>
+            <h5 id="news-title" class="fw-semibold text-decoration-underline mb-0 mt-3"> <%= new.title %> </h5>
             <span class="fs-5"> <%= link_to find_author(new), profile_path(new.account_id) %> •</span> <span class="fs-7">Date Posted <%= find_date new %> </span>
-            <%= simple_format new.content, id: "news-content", class:"fw-light mb-0" %>
+            <%= simple_format displayContentShort(new), id: "news-content", class: "fw-light mb-0" %>
             <%= link_to 'Read More', news_path(new.id), class: "btn btn-sm btn-link ps-0" %>
         </div>
         <hr/>

@@ -1,4 +1,12 @@
-<p id="notice"><%= notice %></p>
+<div class="news-main-photo" style="background-image:url('<%= news_banner_photo(@news)%>')">
+</div>
 
-<%= link_to 'Edit', edit_news_path(@news) %> |
-<%= link_to 'Back', news_index_path %>
+<div class="text-center pb-3">
+    <h1> <%= @news.title %> </h1>
+    <h6> By: <%= find_author(@news) %></h6>
+</div>
+
+<div class="mx-auto pt-4" style="width: 80%;">
+    <p class="fw-bold text-decoration-underline"> <%= find_date(@news) %> </p>
+    <span class=""> <%= @news.content %> </span>
+</div>

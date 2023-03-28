@@ -13,8 +13,12 @@ module NewsHelper
         show_datetime = "#{day}, #{month} #{date}"
     end
 
-    def property_banner_photo property
-        img = property.photo.present? ? property.photo.thumb.url : asset_url("announcement.jpeg")
+    def displayContentShort new
+        contentShort = new.content[0,400]
+    end
+
+    def news_banner_photo new
+        img = new.photo.present? ? new.photo.thumb.url : asset_url("announcement.jpeg")
     end
 
     def news_thumbnail new
