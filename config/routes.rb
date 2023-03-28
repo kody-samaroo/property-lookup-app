@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   devise_for :accounts
 
   get "/accounts" => 'admin#accounts', as: :accounts
+  delete "/accounts/:id" => 'accounts#delete', as: :delete_account
 
   get '/dashboard' => 'dashboard#index', as: :dashboard
   get '/profile/:id' => 'accounts#profile', as: :profile
