@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <div class="bg-warning pb-1 bg-opacity-75 border border-3">
-    <h2 class="display-1 text-center"><em> Properties </em></h2>
-    <figcaption class="footer text-center">
+    <h2 class="display-1 text-center text-light"><em> Properties </em></h2>
+    <figcaption class="footer text-center text-muted">
       A list of all the properties
     </figcaption>
 </div>
@@ -52,13 +52,14 @@
 <div class="row">
   <div class="col-sm-9">
 
-<%= link_to 'New Property', new_property_path, class: "btn btn-warning" %>
+<%= link_to 'New Property', new_property_path, class: "btn btn-warning text-white" %>
 
   </div>
 
   <div class="col-sm-3">
 <ul class="pagination">
-  <li class="page-item">
+<li class=”disabled”> <%= will_paginate(@properties) %> </li>
+  <%# <li class="page-item">
     <a class="page-link" href="#" aria-label="Previous">
       <span aria-hidden="true">&laquo;</span>
     </a>
@@ -70,7 +71,8 @@
     <a class="page-link" href="#" aria-label="Next">
       <span aria-hidden="true">&raquo;</span>
     </a>
-  </li>
+  </li> %>
 </ul>
 </div>
 </div>
+

@@ -23,6 +23,7 @@ gem "font-awesome-sass", "~> 6.3.0"
 gem 'toastr-rails', '~> 1.0', '>= 1.0.3'
 gem 'dotenv-rails'
 gem 'popper_js', '~> 2.11.5'
+gem 'will_paginate', '~> 3.3'
 
 # Image uploads to Amazon S3
 gem 'carrierwave', '~> 0.10.0'
