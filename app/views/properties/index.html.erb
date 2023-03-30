@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<h3>Properties</h3>
+<div class="bg-warning pb-1 bg-opacity-75">
+    <h2 class="display-1 text-center"><em> Properties </em></h2>
+    <figcaption class="footer text-center">
+      A list of all the properties
+    </figcaption>
+</div>
 
 <table class="table table-striped">
   <thead>
@@ -11,7 +16,7 @@
       <th>Rooms</th>
       <th>Bathrooms</th>
       <th>Sqft</th>
-      <th colspan="3"></th>
+      <th colspan="3"> Controls </th>
     </tr>
   </thead>
 
@@ -20,7 +25,7 @@
       <tr>
         <td><%= property.name %></td>
         <td><%= property.address %></td>
-        <td><%= property.price %></td>
+        <td> $<%= number_with_precision(property.price, :precision => 2, :delimiter => ',') %></td>
         <td><%= property.rooms %></td>
         <td><%= property.bathrooms %></td>
         <td><%= property.sqft %></td>
@@ -35,3 +40,19 @@
 <br>
 
 <%= link_to 'New Property', new_property_path, class: "btn btn-success" %>
+
+  <ul class="pagination">
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
