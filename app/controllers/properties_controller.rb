@@ -5,7 +5,7 @@ class PropertiesController < ApplicationController
 
   # GET /properties or /properties.json
   def index
-    @properties = Property.paginate(page: params[:page], per_page: 1)
+    @properties = Property.paginate(page: params[:page], per_page: 20)
   end
 
   # GET /properties/1 or /properties/1.json

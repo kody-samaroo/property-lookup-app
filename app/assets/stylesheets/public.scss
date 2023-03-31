@@ -17,3 +17,52 @@
 #button-link:hover {
     border-bottom: 2px solid black;
 }
+
+
+.page_pagination {
+    text-align: center;
+    cursor: default; 
+}
+
+.page_pagination a, .page_pagination span, .page_pagination em {
+    padding-right: 0.5em;
+    padding-left: 0.5em;
+}
+
+.page_pagination .disabled {
+    color: #aaaaaa;
+}
+
+.page_pagination .current {
+    font-style: normal;
+    font-weight: bold;
+    color: #F58F06;
+}
+
+.page_pagination a {
+    border: 1px solid #dddddd;
+    color: #f58d067e;
+    text-decoration: none;
+}
+
+.page_pagination a:hover, .page_pagination a:focus {
+    border-color: #003366;
+    background: #F58F06;
+    color: white;
+}
+
+.page_pagination .page_info {
+    color: #aaaaaa;
+}
+
+.page_pagination .previous_page, .page_pagination .next_page {
+    border-width: 2px;
+}
+
+.page_pagination .previous_page {
+    margin-right: 1em;
+}
+
+.page_pagination .next_page {
+    margin-left: 1em;
+}

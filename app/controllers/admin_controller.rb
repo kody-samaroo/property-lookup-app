@@ -2,7 +2,7 @@ class AdminController < ApplicationController
     before_action :can_access?
 
     def accounts
-        @accounts = Account.where(admin: false)
+        @accounts = Account.where(admin: false).paginate(page: params[:page], per_page: 20)
     end
 
     def can_access?

@@ -28,7 +28,7 @@
         <td> $<%= number_with_precision(property.price, :precision => 2, :delimiter => ',') %></td>
         <td class="text-center"><%= property.rooms %></td>
         <td class="text-center"><%= property.bathrooms %></td>
-        <td><%= property.sqft %></td>
+        <td class="text-center"><%= property.sqft %></td>
         <td>
         <%= link_to property do %>
           <i id="button-link" class="fa-solid fa-magnifying-glass text-secondary"></i>
@@ -50,29 +50,17 @@
 </table>
 
 <div class="row">
-  <div class="col-sm-9">
-
-<%= link_to 'New Property', new_property_path, class: "btn btn-warning text-white" %>
-
+  <div class="col-sm-7">
+    <%= link_to 'New Property', new_property_path, class: "btn btn-warning text-white" %>
   </div>
 
-  <div class="col-sm-3">
-<ul class="pagination">
-<li class=”disabled”> <%= will_paginate(@properties) %> </li>
-  <%# <li class="page-item">
-    <a class="page-link" href="#" aria-label="Previous">
-      <span aria-hidden="true">&laquo;</span>
-    </a>
-  </li>
-  <li class="page-item"><a class="page-link" href="#">1</a></li>
-  <li class="page-item"><a class="page-link" href="#">2</a></li>
-  <li class="page-item"><a class="page-link" href="#">3</a></li>
-  <li class="page-item">
-    <a class="page-link" href="#" aria-label="Next">
-      <span aria-hidden="true">&raquo;</span>
-    </a>
-  </li> %>
-</ul>
-</div>
+
+  <div class="col-sm-5 page_pagination">
+      <div class="page_info">
+        <%= page_entries_info @properties %>
+      </div>
+    <%= will_paginate @properties, :container => false %>
+  </div>
+
 </div>
 
