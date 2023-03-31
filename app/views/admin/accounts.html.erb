@@ -20,7 +20,7 @@
 
   <tbody>
     <% @accounts.each do |account| %>
-      <tr>
+      <tr class="bg-warning bg-opacity-10 border border-secondary border-2">
         <td><%= account.first_name %></td>
         <td><%= account.last_name %></td>
         <td><%= account.email %></td>
@@ -40,4 +40,13 @@
   </tbody>
 </table>
 
-<br>
+<div class="row">
+
+  <div class="col-sm-2 page_pagination">
+      <div class="page_info">
+        <%= page_entries_info @accounts %>
+      </div>
+    <%= will_paginate @accounts, :container => false %>
+  </div>
+
+</div>

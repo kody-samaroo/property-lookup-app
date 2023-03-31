@@ -9,7 +9,7 @@ class PublicController < ApplicationController
     #   redirect_to path, flash: { success: "Successfully signed in. Welcome to Fast Homes" } and return
     # end
     
-    @properties = Property.latest
+    @properties = Property.latest.paginate(page: params[:page], per_page: 17)
     @news = News.all
   end
 

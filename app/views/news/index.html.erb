@@ -43,6 +43,17 @@
   </tbody>
 </table>
 
-<br>
+<div class="row">
+  <div class="col-sm-7">
+    <%= link_to 'Create News Announcement', new_news_path, class: "btn btn-warning text-white" %>
+  </div>
 
-<%= link_to 'Create News Announcement', new_news_path, class: "btn btn-success"  %>
+
+  <div class="col-sm-5 page_pagination">
+      <div class="page_info">
+        <%= page_entries_info @news %>
+      </div>
+    <%= will_paginate @news, :container => false %>
+  </div>
+
+</div>

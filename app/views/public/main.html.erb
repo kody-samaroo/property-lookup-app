@@ -12,10 +12,7 @@
   <section id="latest-properties" class="mb-5">
     <div class="container">
       <div class="row">
-        <%= render "properties/list_properties", properties: @properties %>
-        <% if account_signed_in? %>
-          <%= render "properties/add_properties" %>
-        <% end %>
+        <%= render "properties/list_properties", properties: @properties.paginate(page: params[:page], per_page: 17) %>
       </div>
     </div>
   </section>

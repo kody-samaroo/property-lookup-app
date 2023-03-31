@@ -4,6 +4,9 @@ class DashboardController < ApplicationController
   def index
   end
 
+  def about_us
+  end
+
   private
 
   def set_sidebar

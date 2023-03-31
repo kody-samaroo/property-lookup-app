@@ -1,7 +1,9 @@
-<h1>Updates</h1>
+<div class="bg-warning pb-3 bg-opacity-75 border border-3">
+    <h2 class="display-3 text-center text-light"><em> Announcements </em></h2>
+</div>
 
-<% @news.reverse_each do |new| %>
-    <div class="row" style="height: 250px;">
+<% @news.limit(10).reverse_each do |new| %>
+    <div class="row pt-3" style="height: 250px;">
         <div class="col-sm-3">
             <%= news_thumbnail(new) %>
         </div>
