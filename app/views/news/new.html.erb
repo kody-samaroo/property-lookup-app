@@ -1,5 +1,19 @@
-<h3>Create an update</h3>
+<div class="bg-warning pb-3 bg-opacity-75 border border-3">
+    <h2 class="display-4 text-center text-light"><em> New Announcement </em></h2>
+</div>
 
-<%= render 'form', news: @news %>
+<%= form_with(model: @news) do |form| %>
+  <%= render "layouts/validation", item: @news%>
 
-<%= link_to 'Back', dashboard_path, class: "btn btn-lg btn-block btn-success" %>
+<div class="form-style-10">
+  <div class="inner-wrap">
+    <%= form.label :title %><%= form.text_field :title %>
+    <%= form.label :content %><%= form.text_area :content, class: "pb-4" %>
+    <%= form.label :photo %><%= form.file_field :photo, class: "pt-2 ps-1 pb-2" %>
+  </div>
+
+    <div class="actions pt-2 ps-1">
+        <%= form.submit "Save", class: "button-89" %>
+    </div>
+</div>
+<% end %>

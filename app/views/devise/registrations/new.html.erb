@@ -1,17 +1,23 @@
 <main class="form-auth w-100 m-auto">
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-    <h1 class="h3 mb-3 fw-normal">Please sign up</h1>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <div class="bg-warning pb-3 bg-opacity-75 border border-3">
+      <h2 class="display-4 text-center text-light"><em> New Account </em></h2>
+  </div>
+
+<div class="form-style-10" style="width: 450px;">
+  <div class="inner-wrap">
     <%= render "devise/shared/error_messages", resource: resource %>
-      <%= f.text_field :first_name, autofocus: true, class: "form-control", placeholder: "First Name", style: "margin-bottom: 10px" %>
-      <%= f.text_field :last_name, class: "form-control", placeholder: "Last Name", style: "margin-bottom: 10px" %>
-      <%= f.email_field :email, autofocus: true, class: "form-control", id: "inputEmail", placeholder: "Email address", autocomplete: "email", style: "margin-bottom: 10px" %>
-      <%= f.password_field :password, autocomplete: "new-password", class: "form-control", id: "inputPassword", placeholder: "Password", style: "margin-bottom: 10px" %>
-      <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control", id: "inputPassword", placeholder: "Confirm Password", style: "margin-bottom: 10px" %>
+      <%= f.label :first_name %><%= f.text_field :first_name, autofocus: true %>
+      <%= f.label :last_name %><%= f.text_field :last_name, autofocus: true %>
+      <%= f.label :email %><%= f.email_field :email, autofocus: true, id: "inputEmail", autocomplete: "email" %>
+      <%= f.label :password %><%= f.password_field :password, autocomplete: "new-password", id: "inputPassword" %>
+      <%= f.label :password_confirmation %><%= f.password_field :password_confirmation, autocomplete: "new-password", id: "inputPassword" %>
 
-
-    <button class="w-100 btn btn-lg btn-primary" type="submit">Sign up</button>
+    <button class="w-100 button-89 mt-2" type="submit">Sign up</button>
   </form>
-<% end %>
+  </div>
+  <em class="text-muted"><%= render "devise/shared/links" %></em>
+</div>
 
-<%= render "devise/shared/links" %>
+<% end %>
 </main>

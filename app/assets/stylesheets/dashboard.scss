@@ -75,7 +75,7 @@
   }
 }
 
-
+input::file-selector-button,
 .button-89 {
   --b: 3px;
   --s: .45em;
@@ -99,6 +99,8 @@
   touch-action: manipulation;
 }
 
+input::file-selector-button:hover,
+input::file-selector-button:focus-visible,
 .button-89:hover,
 .button-89:focus-visible{
   --_p: 0px;
@@ -106,6 +108,7 @@
   outline-offset: .05em;
 }
 
+input::file-selector-button:active,
 .button-89:active {
   background: var(--color);
   color: #fff;
