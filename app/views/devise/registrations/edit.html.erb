@@ -1,84 +1,57 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<div class="bg-warning pb-3 bg-opacity-75 border border-3">
+    <h2 class="display-4 text-center text-light"><em> Edit Account </em></h2>
+</div>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="form-group">
-    <%= f.label :first_name %><br />
-    <%= f.text_field :first_name, class: "form-control" %>
+<div class="form-style-10">
+  <div class="inner-wrap">
+    <%= f.label "Confirm your changes by enter your password" %> <%= f.password_field :current_password, autocomplete: "current-password" %>
   </div>
+</div>
 
-  <div class="form-group">
-    <%= f.label :last_name %><br />
-    <%= f.text_field :last_name, class: "form-control" %>
+<div class="form-style-10">
+  <div class="inner-wrap">
+    <%= f.label :first_name, class: "pt-2" %> <%= f.text_field :first_name %>
+    <%= f.label :last_name, class: "pt-2" %> <%= f.text_field :last_name %>
+    <%= f.label :email, class: "pt-2" %> <%= f.email_field :email %>
+    <%= f.label :url, class: "pt-2" %> <%= f.text_field :url %>
+    <%= f.label :telephone, class: "pt-2" %> <%= f.text_field :telephone %>
+    <%= f.label :company, class: "pt-2" %> <%= f.text_field :company %>
+    <%= f.label :bio, class: "pt-2" %> <%= f.text_area :bio %>
+    <%= f.label :image, class: "pt-2" %> <em>(PLEASE USE A URL)</em> <%= f.text_field :image %>
+    <%= f.label :background_image, class: "pt-2" %> <em>(PLEASE USE A URL)</em> <%= f.text_field :background_image %>
   </div>
-
-  <div class="form-group">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, class: "form-control" %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :url %><br />
-    <%= f.text_field :url, class: "form-control" %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :telephone %>
-    <%= f.text_field :telephone, class: "form-control"%>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :company %><br />
-    <%= f.text_field :company, class: "form-control" %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :bio %><br />
-    <%= f.text_area :bio, class: "form-control" %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :image %> <small>(PLEASE USE A URL)</small> <br />
-    <%= f.text_field :image, class: "form-control" %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :background_image %> <small>(PLEASE USE A URL)</small> <br />
-    <%= f.text_field :background_image, class: "form-control" %>
-  </div>
+</div>
 
 
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
-
-  <div class="form-group">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, class: "form-control", autocomplete: "new-password" %>
-    <% if @minimum_password_length %>
-      <br />
-      <em><%= @minimum_password_length %> characters minimum</em>
-    <% end %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, class: "form-control", autocomplete: "new-password" %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, class: "form-control", autocomplete: "current-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Update" %>
+<% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+  <div class="form-style-10">
+    <div><em> <%= image_tag "https://media.istockphoto.com/id/1166034144/vector/exclamation-point-on-the-box-of-red-words-showing-shock-popup-event-notification-on.jpg?s=612x612&w=0&k=20&c=JzhoGyRxMQBlmbaA3gl9Kdd1YTtWo0j7nb8WTKDz3HM=", width: 50, height: 50 %>
+    Currently waiting confirmation for: <%= resource.unconfirmed_email %> </em> </div>
   </div>
 <% end %>
 
-<h3>Cancel my account</h3>
 
-<div>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete %></div>
+<div class="form-style-10">
+  <div class="inner-wrap">
+    <%= f.label "Change password" %> <%= f.password_field :password, autocomplete: "new-password" %>
+      <% if @minimum_password_length %>
+        <br />
+        <em><%= @minimum_password_length %> characters minimum</em>
+      <% end %>
 
-<%= link_to "Back", :back %>
+    <%= f.label :password_confirmation %> <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  </div>
+</div>
+
+
+
+  <div class="actions pb-4">
+    <%= f.submit "Update", class: "button-89"%>
+  </div>
+<% end %>
+
+<%= button_to "Cancel my account", registration_path(resource_name), class: "button-89", data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete %>
+
