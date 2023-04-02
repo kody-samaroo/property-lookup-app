@@ -1,25 +1,26 @@
 <main class="form-auth w-100 m-auto">
+<div class="bg-warning pb-3 bg-opacity-75 border border-3">
+    <h2 class="display-4 text-center text-light"><em> Login </em></h2>
+</div>
+
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <form>
-      <h1 class="h3 mb-3 fw-normal">Pleasdse log in</h1>
+    <div class="form-style-10" style="width: 450px;">
+      <div class="inner-wrap">
+        <%= f.label :email %> <%= f.email_field :email, autofocus: true, id: "inputEmail", autocomplete: "email" %>
+        <%= f.label :password, class: "pt-2" %> <%= f.password_field :password, autocomplete: "current-password", id: "inputPassword" %>
 
-      <div class="form-floating" style="margin-bottom: 10px">
-        <%= f.email_field :email, autofocus: true, class: "form-control", id: "inputEmail", placeholder: "Email address", autocomplete: "email" %>
-        <label for="floatingInput">Email address</label>
-      </div>
-      <div class="form-floating" style="margin-bottom: 10px">
-        <%= f.password_field :password, autocomplete: "current-password", class: "form-control", id: "inputPassword", placeholder: "Password" %>
-        <label for="floatingPassword">Password</label>
+        <div class="checkbox mt-3 text-center">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
       </div>
 
-      <div class="checkbox mb-3 text-center">
-        <label>
-          <input type="checkbox" value="remember-me"> Remember me
-        </label>
-      </div>
-      <button class="w-100 btn btn-lg btn-primary" type="submit">Log in</button>
+      <button class="w-100 button-89 mb-2" type="submit">Log in</button>
     </form>
   <% end %>
 
-  <%= render "devise/shared/links" %>
+  <em class="text-muted"><%= render "devise/shared/links" %></em>
+  
 </main>
