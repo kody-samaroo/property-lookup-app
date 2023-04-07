@@ -29,10 +29,6 @@
     </div>
 <% end %>
 
-<% if account_signed_in? %>
-    <%= render "properties/add_properties" %>
-<% end %>
-
-  <div class="col-sm-2 page_pagination">
+<div class="col-sm-2 page_pagination">
     <%= will_paginate @properties, :container => false %>
-  </div>
+</div>

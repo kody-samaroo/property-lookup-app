@@ -3,7 +3,7 @@
         <%= link_to profile_picture(agent), profile_path(agent.id) %>
     </div>
     <h3 clas="h4 m-0"> <%= agent.first_name %></h3>
-    <p> Dave Real Estate </p>
+    <p> <%= agent.company %> </p>
 
     <div class="d-grid gap-2 pb-2">
         <button class="btn btn-info text-light" id="show-tel" data-telephone="<%= agent.telephone %>"><i class="fa-regular fa-phone pe-1" style="height: 65%"></i> <span class="telephone">CALL</span> </button>
