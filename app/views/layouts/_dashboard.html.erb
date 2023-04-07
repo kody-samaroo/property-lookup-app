@@ -12,12 +12,6 @@
               <%= link_to "Properties", properties_path, class: "nav-link text-light" %>
             <% end %>
           </li>
-          <li class="nav-item">
-            <a class="nav-link text-light" href="#">Buy</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-light" href="#">Sell</a>
-          </li>
           <% if account_signed_in? %>
           <li class="nav-item">
             <%= link_to "Log Out", destroy_account_session_path, method: :delete, class: "nav-link text-light" %>

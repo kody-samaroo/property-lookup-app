@@ -13,33 +13,15 @@ ActiveRecord::Base.connection.tables.each do |t|
     ActiveRecord::Base.connection.reset_pk_sequence!(t)
 end
 
-# Accounts
-April = Account.create! :first_name => "April", :last_name => "O'Neil", :email =>  "april@example.com", :password => "123abc", :password_confirmation => "123abc", :encrypted_password => "123abc", :image => "https://cosmicbook.news/wp-content/uploads/2023/03/april-o-neil-tmnt-cartoon.jpg", :company => "Turtles", :telephone => "1234567890", :background_image => "https://static.wikia.nocookie.net/tmnt/images/2/22/Dx30.png/revision/latest?cb=20151019202208", :admin => true
-April.skip_confirmation!
-April.save!
+# # Accounts
 
-Leo = Account.create! :first_name => "Leonardo", :last_name => "Turtle", :email =>  "leo@example.com", :password => "123abc", :password_confirmation => "123abc", :encrypted_password => "123abc", :image => "https://cdn.shopify.com/s/files/1/2528/8830/products/Leonardo566pin_1024x.png?v=1619393997", :company => "Turtles", :telephone => "1234567890", :background_image => "https://media.istockphoto.com/id/1266832146/vector/abstract-modern-city-skyline-seamless-vector-pattern.jpg?s=612x612&w=0&k=20&c=rkSXzvbF4cm6szelnof81pMVFdORQp7U6oWRPDULVDQ="
-Leo.skip_confirmation!
-Leo.save!
-
-Donny = Account.create! :first_name => "Donatello", :last_name => "Turtle", :email =>  "donny@example.com", :password => "123abc", :password_confirmation => "123abc", :encrypted_password => "123abc", :image => "https://static.miraheze.org/greatcharacterswiki/thumb/f/fc/ImageDonatelloSeasons1-5.png/330px-ImageDonatelloSeasons1-5.png", :company => "Turtles", :telephone => "1234567890", :background_image => "https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1200,h_630/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/iwmnxckx70qssfd84vke/Fast%20Track%20Access%20to%20the%20Prado%20Museum%20in%20Madrid,%20Spain.jpg"
-Donny.skip_confirmation!
-Donny.save!
-
-Raph = Account.create! :first_name => "Raphael", :last_name => "Turtle", :email =>  "raph@example.com", :password => "123abc", :password_confirmation => "123abc", :encrypted_password => "123abc", :image => "https://images.fun.com/products/84137/2-1-221598/tmnt-ultimates-raphael-7-inch-action-figure-alt-2.jpg", :company => "Turtles", :telephone => "1234567890", :background_image => "https://www.popphoto.com/app/uploads/2019/01/17/3FLFGO2GRERNRRVSYOCYJR2CT4.jpg"
-Raph.skip_confirmation!
-Raph.save!
-
-Mikey = Account.create! :first_name => "Michelangelo", :last_name => "Turtle", :email =>  "mikey@example.com", :password => "123abc", :password_confirmation => "123abc", :encrypted_password => "123abc", :image => "https://static.wikia.nocookie.net/tmnt2012series/images/8/88/2012_Michelangelo_clean_character_image.png/revision/latest?cb=20130809041043", :company => "Turtles", :telephone => "1234567890", :background_image => "https://t4.ftcdn.net/jpg/02/75/92/41/360_F_275924184_GP4ACV80EK8NokxlFaUB2qykpXKrroqx.jpg"
-Mikey.skip_confirmation!
-Mikey.save!
-
-# Properties
-
-
-# News/Announcements
-News.create(account_id: 1, title: "Hello World", content: "Hello World this is the first announcment I hope you enjoy your time browsing Abodes Galore. Create an account and upload a property for yourself and share it with your friends. Let us know what you think and have a great day!", photo: "https://t3.ftcdn.net/jpg/03/13/59/86/360_F_313598699_jyO0OFvaccHWe9YsAY1s8Ycpf0qVPIVz.jpg")
+# # Properties
+# Property.create(account_id: 1, name: "Capri Shores" , address: "19843 Capri Shores Ln, Stafford, TX 77477", price: 290000, rooms: 4, bathrooms: 2, sqft: 1617, photo: "https://photos.zillowstatic.com/fp/85b9a1238cb58c37deb0b68dd635638d-cc_ft_768.webp", details: "Colina Homes believes in building your dream 1-Story w/ 4 Bedrooms + 2 Full Baths +  Large Covered Patio at a price you CAN afford! Come see this NEW open-concept home with space in all the right places.", for_sale: true)
+# Property.create(account_id: 1, name: "West Dickens" , address: "6834 W Dickens Ave, Chicago, IL 60707", price: 435000, rooms: 4, bathrooms: 3, sqft: 1982, photo: "https://photos.zillowstatic.com/fp/89e300a905d41d271a62cef547cb56b5-cc_ft_1536.webp", details: "Come see this nicely decorated and well maintained home. You can't miss it.  It's the only one with a RED front door. Bright living room with southern exposure and 3 sided bay window. Refinished hardwood floors in living room, dining room and 2 bedrooms on main floor. Good sized kitchen was remodeled in 2005; and has breakfast nook, granite countertops, Thomasville maple wood cabinets and stainless steel appliances. Connecting to the kitchen is an additional room that has been a recreation room, but may also serve as a den or an office. The second floor has been converted (2012) into 2 huge bedrooms, including the master bedroom, and a modern full bathroom. The home has 2 separate HVAC systems, 1 for the main floor and 1 for the 2nd floor.  The basement is partially finished and waiting for you decoration ideas.  There is also a 2.5 car garage.  Between the house and the garage is a cozy patio with an overheard shelter for rainy day grilling.  Rutherford Sayre Park is 2 blocks away. Has many activities, tennis courts, soccer fields, children's activity programs.", for_sale: true)
+# Property.create(account_id: 1, name: "Avenue 57" , address: "226 Avenue 57, # 206, Los Angeles, CA 90042", price: 2650, rooms: 2, bathrooms: 1, sqft: 750, photo: "https://photos.zillowstatic.com/fp/2e5d4397c325d396296ab426c8ccba72-cc_ft_576.webp", details: "Normally 3000, we're giving a $350/mo credit for at least your first 12 months to bring it to $2650/mo. Updated vintage 2 bed / 1 bath in a unique complex right in the heart of Highland Park! With wall-to-wall hardwood floors, a fully-loaded kitchen w/ breakfast bar and a washer/dryer IN unit, this is the perfect spot to call home in a unique gated community!", for_sale: false)
+# Property.create(account_id: 1, name: "Lake Drive" , address: "17 E Lake Dr, Annapolis, MD 21403", price: 2500, rooms: 2, bathrooms: 1, sqft: 656, photo: "https://photos.zillowstatic.com/fp/e1fc90e4b223e2ea58bc5927411673d9-cc_ft_1152.webp", details: "Enjoy the Beauty and Amenities of Bay Ridge. Modest Cottage 2 Bedrooms 1 Full Bath 1 Car Garage. New Carpet, Freshly Painted. Large Backyard, 3 Season Front Porch, Livingroom, & Dining Room. 2023-03-27", for_sale: true)
+# Property.create(account_id: 1, name: "125st Ter" , address: "12383 SW 125th Ter, Miami, FL 33186", price: 4000, rooms: 4, bathrooms: 3, sqft: 2310, photo: "https://photos.zillowstatic.com/fp/d425fdda05a2bfe27c81154186df0cc1-cc_ft_1152.webp", details: "Beautiful Townhouse in Kendall Breeze South, ROMA model, 4 bedrooms, 3 full bathrooms, including a bedroom and full bathroom on the first floor, the laundry room with washer/dryer on second floor, 2 car garages, is available immediately for occupancy; great location, nice neighborhood, community with gym, 2 playgrounds, 3 pools, security 24 hours and lots of greenery. Close to Turnpike and 874 Don Shula Expy.", for_sale: true)
 
 
 
-print "SEED COMPLETE"
+# print "SEED COMPLETE"

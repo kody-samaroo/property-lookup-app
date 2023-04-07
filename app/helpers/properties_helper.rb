@@ -6,11 +6,11 @@ module PropertiesHelper
     end
 
     def property_thumbnail_url property
-        property.photo.present? ? property.photo : asset_url("house.jpeg")
+        property.photo.present? ? asset_url(property.photo) : asset_url("house.jpeg")
     end
 
     def property_banner_photo property
-        img = property.photo.present? ? property.photo : asset_url("house.jpeg")
+        img = property.photo.present? ? asset_url(property.photo) : asset_url("house.jpeg")
     end
 
     def set_datetime property
