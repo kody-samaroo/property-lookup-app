@@ -1,24 +1,17 @@
-# README
+# Abodes Galore
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Real estate application built using Ruby on Rails 6.1.4.
 
-Things you may want to cover:
+Hosted URL: [insert url here]
 
-* Ruby version
+## 1. Getting Started
 
-* System dependencies
+Log in with an existing account or Sign up it its your first time.
 
-* Configuration
+You can use any valid email you sign up a new account and once you confirm that email address you will access to the application.
 
-* Database creation
+## 2. How To Use The App
 
-* Database initialization
+## 3. Features
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Conclusion
